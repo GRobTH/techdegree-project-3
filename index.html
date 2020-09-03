@@ -24,35 +24,35 @@
         <hr>
 
         <form action="index.html" method="post">
-            <fieldset>
+            <fieldset class="wrapper">
                 <legend>Contact Information</legend>
 
-                <div>
+                <div class="item">
                     <label for="name">Full Name</label>
-                    <input type="text" id="name" name="full_name" placeholder="Required">
+                    <input type="text" id="name" name="full_name" required="required" placeholder="Required">
                 </div>
                 
-                <div>
+                <div class="item">
                     <label for="email">Email Address</label>
-                    <input type="text" id="email" name="user_email" placeholder="Required">
+                    <input type="text" id="email" name="user_email" required="required" placeholder="Required">
                 </div>
 
-                <div>
+                <div class="item">
                     <label for="phone">Phone Number</label>
                     <input type="tel" id="phone" name="user_phone">
                 </div>
 
-                <div>
+                <div class="item">
                     <label for="address">Street Address</label>
                     <input type="text" id="address" name="user_address">
                 </div>
 
-                <div>
+                <div class="item">
                     <label for="city">City</label>
                     <input type="text" id="city" name="full_name">
                 </div>
 
-                <div>
+                <div class="item">
                     <label for="state">State</label>
 
                     <select name="state" id="state">
@@ -111,15 +111,44 @@
                     </select>
                 </div>
 
+                <div class="item">
+                    <label for="zip">Zip Code</label>
+                    <input type="text" id="zip" name="zip_code">
+                </div>
+
             </fieldset>
-            <fieldset>
+            
+            <hr>
+
+            <fieldset class="bottom">
                 <legend>Newsletter</legend>
+
+                    <p>Select the newsletters you would like to receive</p>
+                    
+                    <input type="checkbox" id="html" value="HTML News" name="user_newsletter">
+                    <label for="html">HTML News</label><br>
+                    <input type="checkbox" id="css" value="CSS News" name="user_newsletter">
+                    <label for="css">CSS News</label><br>
+                    <input type="checkbox" id="javascript" value="Javascript News" name="user_newsletter">
+                    <label for="javascript">Javascript News</label><br>
+
+                    <p>Newsletter format</p>
+
+                    <input type="radio" id="format_html" value="format_html" name="news_format">
+                    <label for="format_html">HTML</label><br>
+                    <input type="radio" id="format_plain" value="format_plain" name="news_format">
+                    <label for="format_plain">Plain text</label><br>
+
+                    <label for="other">Other topics you'd like to hear about</label>
+                    <textarea id="other" name="other"></textarea>
             </fieldset>
+
+            <input type="submit" value="Sign Up">
         </form>
     </main>
 
     <footer>
-        Copyright The Code Review
+        <em>Copyright The Code Review</em>
     </footer>
 </body>
 </html>
